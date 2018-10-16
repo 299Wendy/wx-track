@@ -1,0 +1,14 @@
+ .text-center{
+   text-align: center;
+ }
+
+ /*登录图片*/  
+.login-icon{  
+  flex: none;  
+}  
+.login-img{  
+  margin-top: 60rpx;
+  text-align: center;
+  margin-left: 60rpx;
+  height: 80rpx
+}  

@@ -1,0 +1,67 @@
+<view class="header">
+  <view class="header-item {{show == 'todolist' ? 'tab-header-active' : ''}}" data-type="todolist" bindtap="changeViewType">已确认需要renew</view>
+  <view class="header-item {{show == 'renewingList' ? 'tab-header-active' : ''}}" data-type="renewingList" bindtap="changeViewType">正在renew的型号</view>
+</view>
+
+<view class="search-hd">
+  <view class='search-area'>
+    <view class="search-type" >
+      <picker class='' name='searchOption' bindchange='searchOptionChange' value="{{index}}" range="{{searchType}}">
+        <view class=''>
+        {{searchType[index]}}
+        </view>
+      </picker>
+    </view> 
+    <icon class="searchcion" type='search'></icon>             
+    <input class="search-txt" value="{{userInput}}" bindconfirm='search' bindinput='searchBindInput' placeholder="请输入关键字搜索"/>
+    <button class="cancle-btn" bindtap="cancleSearch">取消</button>
+  </view>
+  <view class='search-number' wx:if='{{showSearchAmount}}'>
+    <text>查询结果 {{searchList.length}} 条</text>
+  </view>
+</view>
+
+ <scroll-view scroll-y class="tab-content">
+    <view class="tab-content-item carts-list" hidden="{{show == 'todolist' ? false : true}}">
+      <block wx:if="{{todolist.length == 0}}">
+       
+      </block>
+      <block wx:else>
+        <view class="carts-item" wx:key="" wx:for="{{todolist}}" wx:for-item="item" wx:for-index="index" >
+        
+          <view>
+           <image  class="carts-image" wx:if="{{item.URL==''}}" src="../../images/null.jpg" ></image>
+           <image class="carts-image" wx:else src="{{item.URL}}" mode="aspectFill"/>
+          </view>
+          <view class="source">
+            <text selectable class="list-txt list-title">型号：{{item.ModelSerils}}</text>
+            <text selectable class="list-txt">\n证书类别：{{item.CertType}}</text>
+            <text selectable class="list-txt">\n有效期：{{item.TiXingDate}}</text>              
+          </view>
+          <!--
+        <view class='rightView'>
+          <image class='rightImage' bindtap='changeImage' wx:if="{{!searchList.ImgFlag}}" src='{{heart}}' data-index='{{index}}'></image>
+          <image class='rightImage' bindtap='changeButtonImage' wx:else src='{{heart}}' data-index='{{index}}'></image>
+          </view>
+          -->
+       
+      
+        </view>
+      </block>
+    </view>  
+    
+    <view class="tab-content-item" hidden="{{show == 'renewingList' ? false : true}}">
+      <block wx:if="{{renewingList.length == 0}}">
+       
+      </block>
+
+      <block wx:else>
+       
+      </block>
+    </view>
+  </scroll-view>
+
+
+  
+
+ 

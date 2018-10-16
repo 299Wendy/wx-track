@@ -1,0 +1,46 @@
+{
+  "pages": [
+      "pages/search/search",
+    "pages/prelogin/prelogin",
+    "pages/login/login",
+  
+    "pages/statistics/statistics",
+   
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",  
+    "pages/todotask/todotask",
+    "pages/alltask/alltask"
+    
+  ],
+  "window": {    
+    "navigationBarBackgroundColor": "#47a86c",
+    "navigationBarTitleText": "C-Track"   
+  },
+  "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#47a86c",
+    "backgroundColor": "#f8f8f8",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/task_icon.png",
+        "selectedIconPath": "images/task_active_icon.png",
+        "text": "Attention"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "images/search_icon.png",
+        "selectedIconPath": "images/search_active_icon.png",
+        "text": "Search"
+      },
+      {
+        "pagePath": "pages/statistics/statistics",
+        "iconPath": "images/statistics_icon.png",
+        "selectedIconPath": "images/statistics_active_icon.png",
+        "text": "Statistics"
+      }
+    ]
+  }
+}

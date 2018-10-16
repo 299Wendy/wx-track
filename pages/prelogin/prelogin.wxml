@@ -1,0 +1,9 @@
+
+  <view class="login-icon">  
+    <image class="login-img"  mode='widthFix' src="../../images/login.jpg"></image>  
+  </view>  
+<modal hidden="{{hiddenModalMessage}}" bindcancel="hideModal" bindconfirm="bindaction"  no-cancel>
+  <view class='text-center'>
+    <text selectable>{{modalMessage}}</text>
+  </view>
+</modal> 

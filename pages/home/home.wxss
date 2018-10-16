@@ -1,0 +1,22 @@
+.homeview{
+padding-top: 10rpx;
+text-align: center;
+font-size: 32rpx;
+}
+.img{
+ width: 60%;
+ padding-top: 10rpx;
+ padding-bottom: 40rpx;
+
+}
+.img1{
+ width: 60%;
+ padding-top: 40rpx;
+ text-align: center;
+ padding-bottom: 40rpx;
+
+}
+
+.text-center{
+   text-align: center;
+ }/* pages/home/home.wxss */

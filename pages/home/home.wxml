@@ -1,0 +1,4 @@
+<view class="homeview">
+ <image class="img" mode="widthFix" bindtap="AlltaskTap" src="{{image}}">未确认需要renew的所有型号</image>
+ <image class="img1" mode="widthFix" bindtap="TodotaskTap" src="{{image1}}">已与PM确认需要renew的型号</image>
+</view>

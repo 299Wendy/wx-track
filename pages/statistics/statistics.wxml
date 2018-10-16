@@ -1,0 +1,15 @@
+<view class="header">
+  <view class="header-item {{show == 'alllist' ? 'tab-header-active' : ''}}" data-type="alllist" bindtap="changeViewType">  所有统计 </view>
+      <view class="header-item {{show == 'todoList' ? 'tab-header-active' : ''}}" data-type="todoList" bindtap="changeViewType">需要renew</view>
+  <view class="header-item {{show == 'renewingList' ? 'tab-header-active' : ''}}" data-type="renewingList" bindtap="changeViewType">正在renew</view>
+</view>
+<view class="option-type" >
+  
+   <picker class='' name='searchOption' bindchange='searchOptionChange' value="{{index}}" range="{{searchType}}">
+     <view class=''>
+        {{searchType[index]}}
+     </view>
+   </picker>
+</view>
+
+ <canvas class='canvas' canvas-id="columnCanvas" ></canvas>
